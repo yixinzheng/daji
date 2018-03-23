@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0，user-scaleble=no">
+    <title>签到</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="page-bg">
+    <div class="page-title"></div>
+    <div class="sign-header">
+        <img src="../images/head-logo.png" alt="">
+    </div>
+    <form id="signForm" action="">
+        <div class="sign-box">
+            <input type="text" name="tel" class="sign-input" placeholder="请输入手机号">
+        </div>
+        <button type="submit" class="sign-btn">签&nbsp;&nbsp;&nbsp;到</button>
+    </form>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.validate.min.js"></script>
+<script>
+    $(function () {
+        $("#signForm").validate({
+            rules:{
+                tel: {
+                    required: true
+                }
+            },
+            messages:{
+                tel: {
+                    required: "请输入正确的手机号"
+                }
+            }
+        })
+    })
+</script>
+</body>
+</html>
